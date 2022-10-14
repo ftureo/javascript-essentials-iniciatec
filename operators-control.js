@@ -74,7 +74,7 @@ var numberTwo = 20;
 
 var sum = numberOne + numberTwo; // 30
 
-// Consoe.log para mostrar el resultado de la suma con dos parámetros
+// Console.log para mostrar el resultado de la suma con dos parámetros
 console.log("La suma es", sum);
 // Console.log para mostrar el resultado de la suma con un solo parámetro y convierte el número en string
 console.log("La suma es " + sum);
@@ -126,3 +126,91 @@ console.log("isEqualStringStrict", isEqualStringStrict); // False
 console.log("isEqualStringWeak", isEqualStringWeak); // True
 
 // El operador de igualdad débil (==) convierte los tipos de datos para compararlos (es decir, solo compara su valor) no su tipo de dato mientras que el operador de igual estricta compara el valor y el tipo de dato
+
+// Operadores de comparación de mayor, mayor igual, menor y menor igual
+
+const isGreaterToLeft = 10 > 5;
+console.log("isGreaterToLeft", isGreaterToLeft); // True
+
+const isGreaterToRight = 5 < 10;
+console.log("isGreaterToRight", isGreaterToRight); // True
+
+const isLessToRight = 10 < 5;
+console.log("isLessToRight", isLessToRight); // False
+
+const isLessToLeft = 5 > 10;
+console.log("isLessToLeft", isLessToLeft); // False
+
+const isLess = 5 < 10;
+console.log("isLess", isLess); // True
+
+const isGreaterOrEqual = 10 <= 10;
+console.log("isGreaterOrEqual", isGreaterOrEqual); // True
+
+const isLessOrEqual = 9 <= 10;
+console.log("isLessOrEqual", isLessOrEqual); // True
+
+const isLessOrEqual2 = 11 <= 10;
+console.log("isLessOrEqual2", isLessOrEqual2); // False
+
+const numberFive = 10;
+const numberSix = 20;
+console.log("Is numberFive less than numberSix?", numberFive < numberSix); // True
+console.log("Is numberSix less than numberFive?", numberSix < numberFive); // False
+
+// Operadores lógicos
+// AND (&&) compara dos o más condiciones y devuelve true si todas las condiciones son verdaderas - Pending!
+// OR (||) compara dos o más condiciones y devuelve true si al menos una de las condiciones es verdadera - Pending!
+// NOT (!) invierte el valor de una condición - Pending!
+// i.e. !true = false y !false = true
+
+// Operadores condicionales
+// Operador condicional if
+// if (condición) { código a ejecutar si la condición es verdadera }
+// Si Condicion es true, se ejecuta el código dentro de las llaves y si es false, no se ejecuta nada
+
+const isMarriedConditional = false;
+if (isMarriedConditional) {
+    // Si isMarried es true entonces muestra el siguiente console.log
+    console.log("Está casado");
+}
+if (!isMarriedConditional) {
+    // Lo contrario (!) de false es true
+    // Si isMarried es false entonces muestra el siguiente console.log
+    console.log("No está casado");
+}
+
+const ageUser = prompt("¿Cuál es tu edad?");
+console.log("ageUser", ageUser);
+// TypeOf para saber el tipo de dato de una variable
+console.log("TypeOf ageUser", typeof ageUser); // string
+// Al tipo string lo convierte a tipo number con el método Number()
+const ageUserToNumber = Number(ageUser);
+console.log("TypeOf ageUser", typeof ageUserToNumber); // number
+
+if (ageUserToNumber < 18) {
+    console.log("El usuario es menor de edad. No puedes ingresar");
+}
+if (ageUserToNumber >= 18) {
+    console.log("El usuario es mayor de edad. Puedes ingresar");
+}
+
+// Operador condicional if else
+// if (condición) { código a ejecutar si la condición es verdadera } else { código a ejecutar si la condición es falsa }
+
+if (ageUserToNumber < 18) {
+    console.log("El usuario es menor de edad. No puedes ingresar");
+} else {
+    console.log("El usuario es mayor de edad. Puedes ingresar");
+}
+
+// Operador condicional if else if
+// if (condición) { código a ejecutar si la condición es verdadera } else if (condición) { código a ejecutar si la condición es verdadera } else { código a ejecutar si la condición es falsa }
+
+if (ageUserToNumber < 18) {
+    console.log("El usuario es joven");
+} else if (ageUserToNumber >= 18 && ageUserToNumber < 80) {
+    console.log("El usuario es adulto");
+} else {
+    console.log("El usuario es adulto mayor");
+}
