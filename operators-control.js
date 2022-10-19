@@ -169,48 +169,120 @@ console.log("Is numberSix less than numberFive?", numberSix < numberFive); // Fa
 // if (condición) { código a ejecutar si la condición es verdadera }
 // Si Condicion es true, se ejecuta el código dentro de las llaves y si es false, no se ejecuta nada
 
-const isMarriedConditional = false;
-if (isMarriedConditional) {
-    // Si isMarried es true entonces muestra el siguiente console.log
-    console.log("Está casado");
-}
-if (!isMarriedConditional) {
-    // Lo contrario (!) de false es true
-    // Si isMarried es false entonces muestra el siguiente console.log
-    console.log("No está casado");
+// const isMarriedConditional = false;
+// if (isMarriedConditional) {
+//     // Si isMarried es true entonces muestra el siguiente console.log
+//     console.log("Está casado");
+// }
+// if (!isMarriedConditional) {
+//     // Lo contrario (!) de false es true
+//     // Si isMarried es false entonces muestra el siguiente console.log
+//     console.log("No está casado");
+// }
+
+// const ageUser = prompt("¿Cuál es tu edad?");
+// console.log("ageUser", ageUser);
+// // TypeOf para saber el tipo de dato de una variable
+// console.log("TypeOf ageUser", typeof ageUser); // string
+// // Al tipo string lo convierte a tipo number con el método Number()
+// const ageUserToNumber = Number(ageUser);
+// console.log("TypeOf ageUser", typeof ageUserToNumber); // number
+
+// if (ageUserToNumber < 18) {
+//     console.log("El usuario es menor de edad. No puedes ingresar");
+// }
+// if (ageUserToNumber >= 18) {
+//     console.log("El usuario es mayor de edad. Puedes ingresar");
+// }
+
+// // Operador condicional if else
+// // if (condición) { código a ejecutar si la condición es verdadera } else { código a ejecutar si la condición es falsa }
+
+// if (ageUserToNumber < 18) {
+//     console.log("El usuario es menor de edad. No puedes ingresar");
+// } else {
+//     console.log("El usuario es mayor de edad. Puedes ingresar");
+// }
+
+// // Operador condicional if else if
+// // if (condición) { código a ejecutar si la condición es verdadera } else if (condición) { código a ejecutar si la condición es verdadera } else { código a ejecutar si la condición es falsa }
+
+// if (ageUserToNumber < 18) {
+//     console.log("El usuario es joven");
+// } else if (ageUserToNumber >= 18 && ageUserToNumber < 80) {
+//     console.log("El usuario es adulto");
+// } else {
+//     console.log("El usuario es adulto mayor");
+// }
+
+// Operador condicional switch
+// switch (variable) { case valor: código a ejecutar si la variable es igual al valor; break; case valor: código a ejecutar si la variable es igual al valor; break; default: código a ejecutar si la variable no es igual a ninguno de los valores; break; }
+
+console.log("Un código que se ejecuta antes del switch");
+
+// El switch no es más que un par de if else anidados
+const expression = "Apple";
+switch (expression) {
+    case "Oranges":
+        console.log("Oranges are $0.59 a pound.");
+        break;
+    case "Mangoes":
+        console.log("Mangoes are $2.79 a pound.");
+        break;
+    case "Papayas":
+        console.log("Mangoes and papayas are $2.79 a pound.");
+        // expected output: "Mangoes and papayas are $2.79 a pound."
+        break;
+    case "Apple":
+        console.log("We are fruits and a great source of vitamin C!");
+        break;
+    default:
+        console.log(`Sorry, we are out of ${expression}.`);
 }
 
-const ageUser = prompt("¿Cuál es tu edad?");
-console.log("ageUser", ageUser);
-// TypeOf para saber el tipo de dato de una variable
-console.log("TypeOf ageUser", typeof ageUser); // string
-// Al tipo string lo convierte a tipo number con el método Number()
-const ageUserToNumber = Number(ageUser);
-console.log("TypeOf ageUser", typeof ageUserToNumber); // number
+console.log("Un código que se ejecuta después del switch");
 
-if (ageUserToNumber < 18) {
-    console.log("El usuario es menor de edad. No puedes ingresar");
+if (expression === "Apple") {
+    console.log("We are fruits and a great source of vitamin C!");
 }
-if (ageUserToNumber >= 18) {
-    console.log("El usuario es mayor de edad. Puedes ingresar");
+if (expression === "Mangoes") {
+    console.log("Mangoes are $2.79 a pound.");
 }
-
-// Operador condicional if else
-// if (condición) { código a ejecutar si la condición es verdadera } else { código a ejecutar si la condición es falsa }
-
-if (ageUserToNumber < 18) {
-    console.log("El usuario es menor de edad. No puedes ingresar");
-} else {
-    console.log("El usuario es mayor de edad. Puedes ingresar");
+if (expression === "Papayas") {
+    console.log("Mangoes and papayas are $2.79 a pound.");
+}
+if (expression === "Oranges") {
+    console.log("Oranges are $0.59 a pound.");
 }
 
-// Operador condicional if else if
-// if (condición) { código a ejecutar si la condición es verdadera } else if (condición) { código a ejecutar si la condición es verdadera } else { código a ejecutar si la condición es falsa }
+// const fruitUser = prompt(
+//     "¿Cuál es tu fruta favorita? 1. Manzana 2. Mango 3. Papaya 4. Naranja"
+// );
+// console.log("fruitUser", fruitUser, typeof fruitUser);
 
-if (ageUserToNumber < 18) {
-    console.log("El usuario es joven");
-} else if (ageUserToNumber >= 18 && ageUserToNumber < 80) {
-    console.log("El usuario es adulto");
-} else {
-    console.log("El usuario es adulto mayor");
-}
+// Condicionales ternarios
+// En ECMA6 se puede usar el operador ternario para simplificar el código
+
+// const animal = prompt("¿Cuál es tu animal favorito?");
+
+// if (animal === "cat") {
+//     // Si animal es igual a cat, es decir "true"
+//     console.log("The cats are amazing");
+// } else {
+//     console.log("The other pets too are funny");
+// }
+
+// Condicional ternario
+// Analiza una condición y devuelve un valor si es true o false. Para simplificar el código, ECMA6 implementa los operadores "?" y ":" para reemplazar el if y else respectivamente
+
+// condición '?' valor si es true ':' valor si es false
+
+// animal === "cat"
+//     ? console.log("The cats are amazing", animal)
+//     : console.log("The other pets too are funny");
+
+// const teamUser = prompt("¿Cuál es tu equipo favorito?");
+
+// teamUser === "River Plate"
+//     ? console.log("You're a great fan")
+//     : console.log("You're only a fan");
