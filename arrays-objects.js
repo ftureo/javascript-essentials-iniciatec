@@ -124,12 +124,88 @@ for (let i = 0; i < arrayToFor.length; i++) {
 
 for (let i = 0; i < arrayToFor.length; i++) {
     console.log(
-        `El valor del índice del elemento es ${i} y el valor del elemento es ${arrayToFor[i]}`
+        `El valor del índice del elemento es ${i} y el valor del elemento es 
+        ${arrayToFor[i]}`
     );
 }
+console.log("arrayToFor", arrayToFor);
+console.log(typeof arrayToFor); // Why?
 
-for (let i = 0; i < fruitsArray.length; i++) {
-    console.log(
-        `El valor del índice del elemento es ${i} y el nombre de la fruta es ${fruitsArray[i]}`
-    );
-}
+// for (let i = 0; i < fruitsArray.length; i++) {
+//     console.log(
+//         `El valor del índice del elemento es ${i} y el nombre de la fruta es ${fruitsArray[i]}`
+//     );
+// }
+
+// Objects
+
+const userJL = {
+    //Format - Key: Value
+    name: "Jose",
+    lastName: "Vallejos",
+    age: 27,
+    isMarried: false,
+    isWorking: true,
+    placeJob: {
+        namePosition: "Secretario",
+        typeCompany: "Abogacía",
+        seniorityInAges: 3,
+    },
+    hasPets: true,
+    pets: ["marmota", "nutria"],
+    isStudent: true,
+    studies: [
+        {
+            id: 1,
+            technology: "HTML",
+            level: "Advanced",
+        },
+        {
+            id: 2,
+            technology: "CSS",
+            level: "Advanced",
+        },
+        {
+            id: 3,
+            technology: "JS",
+            level: "Intermediate",
+        },
+    ],
+};
+
+console.log("userJL", userJL);
+
+// Quiero mostrar el nombre y el apellido en un console.log utilizando los datos del objeto userJL
+console.log(userJL[0]); // No funciona - No me muestra el nombre
+console.log(userJL[1]); // No funciona - No me muestra el apellido
+
+// Método accesor para las propiedades de un objeto: . (punto) - Dot notation
+// object.property
+console.log(userJL.name); // Output: "Jose"
+console.log(userJL.lastName); // Output: "Vallejos"
+
+console.log(
+    `El nombre del usuario es ${userJL.name} y su apellido es ${userJL.lastName}`
+); // Output: "El nombre del usuario es Jose y su apellido es Vallejos"
+
+// Veamos las claves del objeto
+console.log(Object.keys(userJL)); // Output: ["name", "lastName", "age", "isMarried", "isWorking", "placeJob", "hasPets", "pets"]
+// Veamos los valores de cada clave del objeto
+console.log(Object.values(userJL)); // Output: ["Jose", "Vallejos", 27, false, true, {…}, true, Array(2)]
+// Cómo hago para mostrar que trabaja como secretario?
+console.log(userJL.placeJob.namePosition); // Output: "Secretario"
+
+//Quiero mostrar que Jose está estudiando JS
+// console.log(userJL.studies[2]); // Output: "JS"
+
+// console.log(
+//     `El nombre del usuario es ${userJL.name} y su apellido es ${userJL.lastName} y trabaja como ${userJL.placeJob.namePosition}. Actualmente está estudiando ${userJL.studies[2]}`
+// );
+
+console.log("Esteban", userJL.studies[2].technology); // No accesible
+console.log("Jose", userJL.studies[2].technology);
+console.log("Sher", userJL.studies[1].technology);
+
+console.log(
+    `El nombre del usuario es ${userJL.name} y su apellido es ${userJL.lastName} y trabaja como ${userJL.placeJob.namePosition}. Actualmente está estudiando ${userJL.studies[2]}`
+);
